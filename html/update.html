@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update me</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script lang="javascript">
+        $(document).ready(()=>{
+            $("#updateme").click(()=>{
+                $.ajax({
+                    url : "http://localhost:3242/",
+                    method : "PUT" ,
+                    data : { 
+                        id : $("#id").val(),
+                        name : $("#name").val(),
+                        email : $("#email").val(),
+                        password : $("#password").val()
+                    },
+                    success : (data)=>{
+                        alert( "data update")
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    id :  <input type="text" id="id"><br>
+    name : <input type="text" id="name"><br>
+    email: <input type="text" id="email"><br>
+    password : <input type="text" id="password"><br>
+    <input type="button" value="update" id="updateme" >
+</body>
+</html>

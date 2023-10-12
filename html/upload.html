@@ -1,0 +1,9 @@
+<form action="/multiplefile" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" multiple required>
+    <button type="submit">Upload</button>
+  </form>
+
+  <form action="/singlefile" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".jpeg"  required>
+    <button type="submit">Upload</button>
+  </form>
